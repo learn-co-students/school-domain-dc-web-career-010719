@@ -23,8 +23,8 @@ end
 
     def sort
     sorted_hash = {}
-    roster.each do |grades, student|
-      sorted_hash[grades] = student.sort
+    roster.each do |grades, student| #sortng through hash by grades is a key, students is a value
+      sorted_hash[grades] = student.sort #storing student sorted array in sorted hash
     end
     return sorted_hash
   end
