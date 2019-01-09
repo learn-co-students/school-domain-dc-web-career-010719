@@ -4,14 +4,11 @@ require 'pry'
 class School
 
     # @@school_grade = []
+    attr_reader :roster
 
     def initialize(school_name)
         @name = school_name
         @roster = {}
-    end
-
-    def roster
-        @roster
     end
 
     def add_student(student_name, grade)
@@ -26,9 +23,8 @@ class School
     end
 
     def sort
-        @roster = @roster.map do |grade, students|
-            binding.pry
-            {grade.sort => students.sort}
+        @roster.each do |grade, students|
+          @roster[grade] = students.sort
         end
     end
 end
