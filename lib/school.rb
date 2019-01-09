@@ -1,7 +1,7 @@
 require 'pry'
 
 class School
-	attr_reader :roster
+	attr_reader :roster, :name
 
 	def initialize(name)
 		@name = name
@@ -25,5 +25,4 @@ class School
 			end
 		end
 	end
-
 end
