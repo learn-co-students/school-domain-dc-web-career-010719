@@ -3,7 +3,6 @@ require 'pry'
 
 class School
 
-    # @@school_grade = []
     attr_reader :roster
 
     def initialize(school_name)
@@ -12,14 +11,14 @@ class School
     end
 
     def add_student(student_name, grade)
-        if !@roster.key?(grade)
-            @roster[grade] = []
+        if !self.roster.key?(grade)
+            self.roster[grade] = []
         end
-        @roster[grade] << student_name
+        self.roster[grade] << student_name
     end
 
     def grade(grade_request)
-        @roster[grade_request]
+        self.roster[grade_request]
     end
 
     def sort
